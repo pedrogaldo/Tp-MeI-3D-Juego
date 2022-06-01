@@ -19,22 +19,42 @@ public class movimiento : MonoBehaviour
        
         if (Input.GetKey(KeyCode.W))
         {
-            for (speed = 0; speed <= 0.04; speed += 0.001f)
+            for(speed=0; speed<0.01; speed+=0.0001f)
             {
                 transform.Translate(0, 0, speed);
             }
         }
 
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.W))
         {
-            transform.eulerAngles -= new Vector3(0, rotationSpeed, 0);
+            while (speed > 0)
+            {
+                speed -= 0.0001f;
+            }
+        }
+
+        if (speed > 0)
+        { 
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.eulerAngles -= new Vector3(0, rotationSpeed, 0);
+            }
+
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.eulerAngles += new Vector3(0, rotationSpeed, 0);
+            }
         }
 
 
-        if (Input.GetKey(KeyCode.D))
+        if (speed == 0)
         {
-            transform.eulerAngles += new Vector3(0, rotationSpeed, 0);
+            if (Input.GetKey(KeyCode.S))
+            { 
+                transform.Translate(0, 0, -speed);
+            }
         }
            
 

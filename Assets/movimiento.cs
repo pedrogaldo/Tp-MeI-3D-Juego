@@ -8,7 +8,7 @@ public class movimiento : MonoBehaviour
     public float speed;
     public float rotationSpeed;
     public float maxSpeed;
-    public float acceleration;
+    public bool acceleration = true;
     
 
     // Start is called before the first frame update
@@ -20,21 +20,40 @@ public class movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.Translate(0, 0, speed);
+        //aceleracion del auto
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(0, 0, speed * Time.deltaTime);
+            acceleration = true;
+            
+            if (speed <= maxSpeed)
+            {
+                speed += 0.01f;
+            }
 
-            //aceleracion del auto
-            if (speed < maxSpeed)
+            else if (speed == maxSpeed)
             {
                 transform.Translate(0, 0, speed);
-                speed += 0.01f;
             }
         }
 
 
 
+
+        //desaceleracion del auto
+        if (Input.GetKeyUp(KeyCode.W)&&speed>0)
+        {
+            acceleration = false;
+        }
+
+        if (acceleration == false&&speed>0)
+        {
+            speed -= 0.01f;
+        }
+        
+               
+
+        //viraje del auto
         if (speed > 0)
         {
             if (Input.GetKey(KeyCode.A))
@@ -50,13 +69,6 @@ public class movimiento : MonoBehaviour
         }
 
 
-        if (speed == 0)
-        {
-            if (Input.GetKey(KeyCode.S))
-            {
-                transform.Translate(0, 0, -speed);
-            }
-        }
 
        
     }

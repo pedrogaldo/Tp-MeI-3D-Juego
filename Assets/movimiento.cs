@@ -20,8 +20,10 @@ public class movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, speed);
+
         //aceleracion del auto
+
+        transform.Translate(0, 0, speed);
         if (Input.GetKey(KeyCode.W))
         {
             acceleration = true;
@@ -68,9 +70,14 @@ public class movimiento : MonoBehaviour
             }
         }
 
-
+        //frenos 
+        if (Input.GetKey(KeyCode.S)&&speed>0)
+        {
+            speed -= 0.02f;
+        }
 
        
+
     }
 
 }

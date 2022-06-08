@@ -1,6 +1,7 @@
 ﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class movimiento : MonoBehaviour
 {
@@ -92,7 +93,11 @@ public class movimiento : MonoBehaviour
             speed -= 0.02f;
         }
 
-
+        //reiniciar
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Juego");
+        }
 
        
 

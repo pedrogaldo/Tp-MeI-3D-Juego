@@ -762,7 +762,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e94239a4f1e67b646829ec73c4bffa9f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1523a9fc3371fa742b83d279b3476e11, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.409
   m_Pitch: 1
@@ -930,7 +930,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Juego de Auto
+  m_Text: 'El trucho:'
 --- !u!222 &1780876071
 CanvasRenderer:
   m_ObjectHideFlags: 0

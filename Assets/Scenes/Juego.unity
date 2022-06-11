@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  rotationSpeed: 4
+  rotationSpeed: 1
   maxSpeed: 1
   acceleration: 1
 --- !u!1 &1576612432

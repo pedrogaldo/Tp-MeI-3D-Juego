@@ -1,12 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Instantiate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject objeto;
+    int tiempo = 5;
+    bool instant = false;
+
+    void instantiateObject()
     {
+        while (tiempo > 0)
+        {
+            instant = false;
+            Instantiate(objeto);
+            tiempo--;
+            
+        }
+
         
     }
 
@@ -14,5 +25,7 @@ public class Instantiate : MonoBehaviour
     void Update()
     {
         
+
+     
     }
 }

@@ -19,5 +19,11 @@ public class Ganar : MonoBehaviour
             SceneManager.LoadScene("Ganaste");
         }
 
+        if (col.gameObject.name == "circuitoInterno" || col.gameObject.name == "circuitoExterno")
+        {
+            SceneManager.LoadScene("Perdiste");
+        }
+
+
     }
 }

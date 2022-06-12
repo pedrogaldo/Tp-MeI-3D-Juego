@@ -12,7 +12,7 @@ public class movimiento : MonoBehaviour
 
 
     public bool acceleration = true;
-
+    public bool reverse = false;
 
 
 
@@ -35,10 +35,10 @@ public class movimiento : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             acceleration = true;
-            
+
             if (speed <= maxSpeed)
             {
-                speed += 0.01f;
+                speed += 0.005f;
             }
 
             else if (speed == maxSpeed)
@@ -49,6 +49,29 @@ public class movimiento : MonoBehaviour
 
 
 
+        //aceleracion en reversa
+
+
+        if (reverse == true)
+        {
+            if (speed <= 0)
+            {
+                speed -= 0.005f;
+            }
+        }
+
+
+        //desaceleracion en reversa
+
+        if (Input.GetKeyUp(KeyCode.S) && speed <= 0)
+        {
+            reverse = false;
+        }
+
+        if (reverse == false && speed <= 0)
+        {
+            speed += 0.005f;
+        }
 
         //desaceleracion del auto
         if (Input.GetKeyUp(KeyCode.W)&&speed>0)
@@ -58,7 +81,7 @@ public class movimiento : MonoBehaviour
 
         if (acceleration == false&&speed>0)
         {
-            speed -= 0.01f;
+            speed -= 0.005f;
         }
         
                
@@ -88,10 +111,13 @@ public class movimiento : MonoBehaviour
 
 
         //frenos 
-        if (Input.GetKey(KeyCode.S)&&speed>0)
+        if (Input.GetKey(KeyCode.S)&&speed>=-1.421f)
         {
-            speed -= 0.02f;
+            reverse = true;
+            speed -= 0.01f;
         }
+
+
 
         //reiniciar
         if (Input.GetKeyDown(KeyCode.Escape))

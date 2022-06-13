@@ -167,8 +167,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &100737909
-BoxCollider:
+--- !u!64 &100737909
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -177,9 +177,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &100737910
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -233,8 +234,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100737908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -128, y: 0.65, z: -53}
-  m_LocalScale: {x: 2.8901, y: 2.8901, z: 2.8901}
+  m_LocalPosition: {x: -127.1, y: -1.42, z: -53}
+  m_LocalScale: {x: 29.481293, y: 2.8901, z: 0.40441167}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -626,13 +627,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358077169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102, y: 0.4, z: -130}
-  m_LocalScale: {x: 4.5442367, y: 2.8580105, z: 6.602862}
+  m_LocalRotation: {x: -0, y: -0.011014651, z: -0, w: 0.9999394}
+  m_LocalPosition: {x: 95, y: -1.41, z: -128.1}
+  m_LocalScale: {x: 4.9167743, y: 2.8580105, z: 32.985916}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.2620001, z: 0}
 --- !u!1 &1362780664
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +747,7 @@ MonoBehaviour:
   rotationSpeed: 1
   maxSpeed: 1.421
   acceleration: 1
-  reversa: 0
+  reverse: 0
 --- !u!1 &1576612432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDisplay: {fileID: 691949225}
-  tiempoRestante: 90
+  tiempoRestante: 30
   restando: 0
 --- !u!4 &2033867096
 Transform:
@@ -1186,7 +1187,7 @@ PrefabInstance:
     - target: {fileID: 9059454959185812367, guid: 759ef9965ce0e9c43bf3f21de236a816,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9100003
+      value: 3.16
       objectReference: {fileID: 0}
     - target: {fileID: 9059454959185812367, guid: 759ef9965ce0e9c43bf3f21de236a816,
         type: 3}
@@ -1221,7 +1222,7 @@ PrefabInstance:
     - target: {fileID: 9059454959185812367, guid: 759ef9965ce0e9c43bf3f21de236a816,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.7099975
+      value: -2.079
       objectReference: {fileID: 0}
     - target: {fileID: 9059454959185812367, guid: 759ef9965ce0e9c43bf3f21de236a816,
         type: 3}
